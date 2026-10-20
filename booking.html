@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Wedding | Eternal Knot Online Booking</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg sticky-top main-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-gem"></i>
+        Eternal<span>Knot</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#weddingNav" aria-controls="weddingNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="weddingNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="venues.html">Venues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn nav-cta-btn" href="booking.html">
+              <i class="bi bi-calendar-heart me-1"></i> Book Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Page Banner
+       ========================================================================== -->
+  <header class="page-banner">
+    <div class="container">
+      <span class="hero-subtitle">Reserve Your Special Day</span>
+      <h1>Online Wedding Booking</h1>
+      <p>Configure your venue, pick bespoke wedding services, and view your live estimated price instantly.</p>
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html">Home</a></li>
+        <li><span>/</span></li>
+        <li class="text-white-50">Book Now</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Error / Alert Message Container -->
+      <div id="bookingAlert" class="alert d-none mb-4" role="alert"></div>
+
+      <div class="row g-4">
+        
+        <!-- ==========================================================================
+             Left Column: Interactive Booking Form
+             ========================================================================== -->
+        <div class="col-lg-7 col-xl-8">
+          <div class="booking-card">
+            <div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-4">
+              <div>
+                <h3 class="h4 mb-1">Wedding Reservation Details</h3>
+                <p class="small text-muted mb-0">Fill in the fields below to calculate your package and reserve your date.</p>
+              </div>
+              <span class="badge badge-gold"><i class="bi bi-shield-lock-fill me-1"></i> Instant Confirmation</span>
+            </div>
+
+            <form id="weddingBookingForm" novalidate>
+              
+              <!-- Section 1: Customer Personal Details -->
+              <div class="mb-4">
+                <h5 class="text-dark fw-bold mb-3 fs-6 text-uppercase text-secondary">
+                  <i class="bi bi-person-circle text-warning me-1"></i> 1. Contact Information
+                </h5>
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullName" placeholder="e.g. Priya Sharma & Rohan Verma" required>
+                    <div class="form-text">Enter the couple's primary contact name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="e.g. wedding@example.com" required>
+                    <div class="form-text">We'll send booking summaries to this email.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" id="phone" placeholder="e.g. 9876543210" required>
+                    <div class="form-text">10-digit mobile number for SMS alerts.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Date, Venue & Guest Capacity -->
+              <div class="mb-4 pt-3 border-top">
+                <h5 class="text-dark fw-bold mb-3 fs-6 text-uppercase text-secondary">
+                  <i class="bi bi-geo-alt-fill text-warning me-1"></i> 2. Date & Venue Details
+                </h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="weddingDate" class="form-label">Wedding Date <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="weddingDate" required>
+                    <div class="form-text">Past dates are automatically disabled.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="guestCount" class="form-label">Number of Guests <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="guestCount" value="150" min="10" max="1000" step="10" required>
+                    <div class="form-text">Covers seating arrangement & table service ($15/guest).</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="venueSelect" class="form-label">Select Preferred Venue <span class="text-danger">*</span></label>
+                    <select class="form-select" id="venueSelect" required>
+                      <option value="">-- Choose a Luxury Wedding Venue --</option>
+                      <option value="royal-palace">Grand Royal Palace (Udaipur) — $8,500/day (Max 800)</option>
+                      <option value="sunset-beach">Sunset Beach Resort & Spa (Goa) — $6,500/day (Max 400)</option>
+                      <option value="emerald-garden">Emerald Garden Estate (Bangalore) — $5,200/day (Max 500)</option>
+                      <option value="heritage-fort">Heritage Fort & Courtyard (Jaipur) — $9,500/day (Max 600)</option>
+                      <option value="crystal-ballroom">Crystal Luxury Ballroom (Mumbai) — $7,000/day (Max 450)</option>
+                      <option value="rustic-vineyard">Rustic Vineyard Haven (Nashik) — $4,800/day (Max 300)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3: Wedding Services Selection (Checkboxes) -->
+              <div class="mb-4 pt-3 border-top">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="text-dark fw-bold mb-0 fs-6 text-uppercase text-secondary">
+                    <i class="bi bi-stars text-warning me-1"></i> 3. Select Wedding Services
+                  </h5>
+                  <span class="small text-muted">Select all that apply</span>
+                </div>
+                
+                <div class="row g-2">
+                  <!-- Checkbox 1: Decor -->
+                  <div class="col-md-6">
+                    <label class="service-checkbox-card" for="srv-decor">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-decor" value="decor">
+                        <div>
+                          <strong class="d-block text-dark">Stage & Theme Decor</strong>
+                          <span class="small text-muted">Floral mandap & entry arch</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$1,500</span>
+                    </label>
+                  </div>
+
+                  <!-- Checkbox 2: Catering -->
+                  <div class="col-md-6">
+                    <label class="service-checkbox-card" for="srv-catering">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-catering" value="catering">
+                        <div>
+                          <strong class="d-block text-dark">Gourmet Catering</strong>
+                          <span class="small text-muted">Multi-cuisine live buffet</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$2,500</span>
+                    </label>
+                  </div>
+
+                  <!-- Checkbox 3: Photography -->
+                  <div class="col-md-6">
+                    <label class="service-checkbox-card" for="srv-photography">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-photography" value="photography">
+                        <div>
+                          <strong class="d-block text-dark">Photography & Film</strong>
+                          <span class="small text-muted">4K Cinema, drone & candid shots</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$1,800</span>
+                    </label>
+                  </div>
+
+                  <!-- Checkbox 4: Bridal Makeup -->
+                  <div class="col-md-6">
+                    <label class="service-checkbox-card" for="srv-makeup">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-makeup" value="makeup">
+                        <div>
+                          <strong class="d-block text-dark">Bridal HD Makeup</strong>
+                          <span class="small text-muted">Airbrush artistry & hairstyling</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$600</span>
+                    </label>
+                  </div>
+
+                  <!-- Checkbox 5: Flowers & Lighting -->
+                  <div class="col-md-6">
+                    <label class="service-checkbox-card" for="srv-flowers">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-flowers" value="flowers">
+                        <div>
+                          <strong class="d-block text-dark">Flowers & Lighting</strong>
+                          <span class="small text-muted">Fresh Dutch roses & fairy canopy</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$1,200</span>
+                    </label>
+                  </div>
+
+                  <!-- Checkbox 6: Music & DJ -->
+                  <div class="col-md-6">
+                    <label class="service-checkbox-card" for="srv-music">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-music" value="music">
+                        <div>
+                          <strong class="d-block text-dark">Music & Live DJ</strong>
+                          <span class="small text-muted">Sound, lighting & dhol artists</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$1,000</span>
+                    </label>
+                  </div>
+
+                  <!-- Checkbox 7: Wedding Planner -->
+                  <div class="col-12">
+                    <label class="service-checkbox-card" for="srv-planning">
+                      <div class="service-info">
+                        <input class="form-check-input service-checkbox" type="checkbox" id="srv-planning" value="planning">
+                        <div>
+                          <strong class="d-block text-dark">Full Wedding Coordinator & Master Planner</strong>
+                          <span class="small text-muted">On-site logistics, vendor management, rehearsals & emergency coordination</span>
+                        </div>
+                      </div>
+                      <span class="service-cost">+$2,000</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 4: Special Requests -->
+              <div class="mb-4 pt-3 border-top">
+                <label for="specialRequests" class="form-label">Special Requests / Notes</label>
+                <textarea class="form-control" id="specialRequests" rows="3" placeholder="Tell us about specific theme colors, dietary restrictions, preferred music genres, or arrival timings..."></textarea>
+              </div>
+
+              <!-- Section 5: Terms & Submit -->
+              <div class="mb-4 form-check">
+                <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                <label class="form-check-label small text-muted" for="agreeTerms">
+                  I understand this is a live frontend reservation quotation demonstration. Prices shown are estimates and booking data is validated locally in browser.
+                </label>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-gold btn-lg py-3">
+                  <i class="bi bi-check-circle-fill me-2"></i> Submit Booking Request
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- ==========================================================================
+             Right Column: Live Price Estimator Sticky Summary Card
+             ========================================================================== -->
+        <div class="col-lg-5 col-xl-4">
+          <div class="price-summary-card">
+            <div class="price-summary-header">
+              <span class="badge badge-gold float-end"><i class="bi bi-lightning-charge-fill"></i> Real-time</span>
+              <h4 class="h5 mb-1 text-dark">Estimated Total Price</h4>
+              <p class="small text-muted mb-0">Dynamic calculation based on your picks</p>
+            </div>
+
+            <!-- Breakdown list -->
+            <div class="price-breakdown-list">
+              <!-- Venue line -->
+              <div class="price-breakdown-item">
+                <span><i class="bi bi-buildings text-warning me-1"></i> Venue Fee:</span>
+                <strong id="summaryVenuePrice">$0</strong>
+              </div>
+              <div class="price-breakdown-item sub">
+                <span id="summaryVenueName" class="text-truncate" style="max-width: 220px;">None selected</span>
+              </div>
+
+              <hr class="my-2 border-secondary-subtle">
+
+              <!-- Guests line -->
+              <div class="price-breakdown-item">
+                <span><i class="bi bi-people text-warning me-1"></i> Guest Catering Fee:</span>
+                <strong id="summaryGuestFee">$2,250</strong>
+              </div>
+              <div class="price-breakdown-item sub">
+                <span id="summaryGuestCount">150 Guests ($15/ea)</span>
+              </div>
+
+              <hr class="my-2 border-secondary-subtle">
+
+              <!-- Services line -->
+              <div class="price-breakdown-item">
+                <span><i class="bi bi-stars text-warning me-1"></i> Add-on Services:</span>
+                <strong id="summaryServicesTotal">$0</strong>
+              </div>
+              <div id="summaryServicesList" class="price-breakdown-item sub flex-column align-items-stretch">
+                <span class="text-muted small fst-italic">No additional services selected</span>
+              </div>
+            </div>
+
+            <!-- Total Box -->
+            <div class="price-total-box">
+              <div class="price-total-label">Grand Total (Estimated)</div>
+              <div class="price-total-amount" id="summaryTotalPrice">$2,250</div>
+              <small class="text-muted d-block mt-1">Inclusive of estimated taxes & basic setup</small>
+            </div>
+
+            <!-- Inclusions guarantee list -->
+            <div class="mt-4 pt-3 border-top">
+              <h6 class="small fw-bold text-uppercase text-secondary mb-2">Included with Every Booking:</h6>
+              <ul class="list-unstyled small text-muted mb-0">
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-1"></i> Free date postponement (up to 45 days)</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-1"></i> Complimentary luxury bridal suite</li>
+                <li class="mb-1"><i class="bi bi-check-circle-fill text-success me-1"></i> Dedicated on-ground hospitality manager</li>
+                <li><i class="bi bi-check-circle-fill text-success me-1"></i> No hidden platform processing charges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Booking Success Receipt Modal
+       ========================================================================== -->
+  <div class="modal fade" id="bookingSuccessModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-blush border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <div class="rounded-circle bg-success text-white p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+              <i class="bi bi-check-lg fs-5"></i>
+            </div>
+            <div>
+              <h5 class="modal-title mb-0" id="receiptModalLabel">Booking Request Confirmed!</h5>
+              <small class="text-muted">Reference ID: <strong id="receiptRefNumber" class="text-dark"></strong></small>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body p-4" id="printableReceipt">
+          <div class="alert alert-success d-flex align-items-center mb-4" role="alert">
+            <i class="bi bi-patch-check-fill fs-4 me-3"></i>
+            <div>
+              <strong>Congratulations!</strong> Your wedding reservation inquiry has been processed successfully. Our planning team will review availability and contact you shortly.
+            </div>
+          </div>
+
+          <!-- Itemized Receipt Card -->
+          <div class="card border border-warning-subtle rounded-3 p-3 mb-3 bg-light">
+            <h6 class="border-bottom pb-2 mb-3 fw-bold text-dark">
+              <i class="bi bi-receipt text-warning me-1"></i> Reservation Summary
+            </h6>
+            <div class="row g-3 small">
+              <div class="col-sm-6">
+                <span class="text-muted d-block">Client Name:</span>
+                <strong id="receiptClientName" class="text-dark"></strong>
+              </div>
+              <div class="col-sm-6">
+                <span class="text-muted d-block">Wedding Date:</span>
+                <strong id="receiptDate" class="text-dark"></strong>
+              </div>
+              <div class="col-sm-6">
+                <span class="text-muted d-block">Email Address:</span>
+                <span id="receiptEmail" class="text-dark"></span>
+              </div>
+              <div class="col-sm-6">
+                <span class="text-muted d-block">Phone:</span>
+                <span id="receiptPhone" class="text-dark"></span>
+              </div>
+              <div class="col-sm-6">
+                <span class="text-muted d-block">Selected Venue:</span>
+                <strong id="receiptVenue" class="text-dark"></strong>
+              </div>
+              <div class="col-sm-6">
+                <span class="text-muted d-block">Estimated Guests:</span>
+                <strong id="receiptGuests" class="text-dark"></strong>
+              </div>
+            </div>
+
+            <hr class="my-3">
+
+            <div>
+              <span class="text-muted d-block mb-1">Selected Services:</span>
+              <ul id="receiptServicesList" class="list-unstyled mb-0 ps-1"></ul>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="mb-2">
+              <span class="text-muted d-block">Special Requests:</span>
+              <p id="receiptNotes" class="mb-0 text-dark fst-italic"></p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+              <h5 class="mb-0 text-dark">Total Estimated Price:</h5>
+              <h4 id="receiptTotal" class="mb-0 text-primary-gold-dark fw-bold text-warning"></h4>
+            </div>
+          </div>
+
+          <p class="small text-muted text-center mb-0">
+            * This is a frontend demonstration project for college evaluation. No payment has been debited.
+          </p>
+        </div>
+
+        <div class="modal-footer border-top bg-light">
+          <button type="button" class="btn btn-outline-secondary" onclick="window.print()">
+            <i class="bi bi-printer me-1"></i> Print Receipt
+          </button>
+          <button type="button" class="btn btn-gold" data-bs-dismiss="modal">
+            Close & Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-white mb-3">
+            <i class="bi bi-gem text-warning"></i> Eternal<span class="text-warning">Knot</span>
+          </div>
+          <p>
+            The smart way to calculate wedding expenses and book iconic wedding venues online with absolute transparency.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="venues.html"><i class="bi bi-chevron-right"></i> Venues</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Photo Gallery</a></li>
+            <li><a href="booking.html"><i class="bi bi-chevron-right"></i> Online Booking</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Booking Inquiries</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Check Availability</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Request Custom Quote</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Cancellation Policy</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Destination Weddings</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact Desk</h5>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt text-warning me-2"></i> 108 Royal Orchid Lane, Udaipur, India</li>
+            <li><i class="bi bi-telephone text-warning me-2"></i> +91 98765 43210</li>
+            <li><i class="bi bi-envelope text-warning me-2"></i> info@eternalknot.com</li>
+            <li><i class="bi bi-clock text-warning me-2"></i> Mon - Sun: 9:00 AM - 8:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 <strong>Eternal Knot</strong>. All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <span class="text-muted">College BCA Project - Frontend Only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

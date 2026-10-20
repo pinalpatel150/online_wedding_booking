@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Eternal Knot Wedding Booking</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg sticky-top main-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-gem"></i>
+        Eternal<span>Knot</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#weddingNav" aria-controls="weddingNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="weddingNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="venues.html">Venues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn nav-cta-btn" href="booking.html">
+              <i class="bi bi-calendar-heart me-1"></i> Book Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Page Banner
+       ========================================================================== -->
+  <header class="page-banner">
+    <div class="container">
+      <span class="hero-subtitle">Visual Inspirations</span>
+      <h1>Wedding Photo Gallery</h1>
+      <p>Browse our curated collection of dream stages, regal venues, romantic rituals, and floral masterworks.</p>
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html">Home</a></li>
+        <li><span>/</span></li>
+        <li class="text-white-50">Gallery</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Gallery Filter Buttons -->
+      <div class="text-center mb-5">
+        <span class="script-subtitle">Captured Moments</span>
+        <h2 class="display-6 fw-bold">Moments That Last Forever</h2>
+        <div class="gold-divider"></div>
+        
+        <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+          <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+          <button class="gallery-filter-btn" data-filter="venues">Venues</button>
+          <button class="gallery-filter-btn" data-filter="decorations">Decorations</button>
+          <button class="gallery-filter-btn" data-filter="ceremonies">Ceremonies</button>
+          <button class="gallery-filter-btn" data-filter="flowers">Flowers & Lighting</button>
+          <button class="gallery-filter-btn" data-filter="stages">Wedding Stages</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="row g-4" id="galleryGrid">
+        
+        <!-- Photo 1: Venues -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="venues">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Grand Royal Palace by the Lake, Udaipur">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="Grand Royal Palace" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Grand Royal Palace</h5>
+              <p>Lake-view heritage architecture & courtyards</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 2: Decorations -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="decorations">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Regal Heritage Courtyard Setup with Amber Illumination">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Regal Courtyard Setup" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Heritage Courtyard Decor</h5>
+              <p>Candlelit pathways and royal seating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 3: Stages -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="stages">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Floral Wedding Mandap Stage overlooking the sunset">
+            <img src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=700&q=80" alt="Wedding Stage" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Wedding Mandap Stage</h5>
+              <p>Exotic floral canopy with golden pillars</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 4: Ceremonies -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="ceremonies">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Romantic Ceremony Walk Under Floral Pergola">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=700&q=80" alt="Ceremony Walk" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>The Vow Ceremony</h5>
+              <p>Aisle procession through green gardens</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 5: Flowers & Lighting -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="flowers">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Botanical Rose & Hydrangea Wedding Arch">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=700&q=80" alt="Floral Arch" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Fresh Floral Arch</h5>
+              <p>Blush pink roses, hydrangeas & ivy greens</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 6: Venues -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="venues">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Beachfront Wedding Resort at Sunset, Goa">
+            <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=700&q=80" alt="Sunset Beach Resort" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Sunset Beach Venue</h5>
+              <p>Golden hour ceremony by the ocean shores</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 7: Decorations -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="decorations">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Luxury Wedding Banquet Table Setting with Crystal Cutlery">
+            <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=700&q=80" alt="Banquet Table Setting" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Imperial Banquet Styling</h5>
+              <p>Gold cutlery, crystal glassware & floral runners</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 8: Ceremonies -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="ceremonies">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Sacred Ring Exchange Ritual">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=700&q=80" alt="Ring Exchange" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Sacred Ring Ceremony</h5>
+              <p>Precious heartfelt vows and promise rings</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 9: Flowers & Lighting -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="flowers">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Fairy Light Canopy for Night Receptions">
+            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=700&q=80" alt="Fairy Light Canopy" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Starlit Fairy Tunnel</h5>
+              <p>Warm ambient string lights and hanging glass globes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 10: Stages -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="stages">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Grand Sangeet & Reception Main Stage">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Reception Stage" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Royal Reception Stage</h5>
+              <p>Gold mirrored backdrop and velvet sofa sets</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 11: Venues -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="venues">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Grand Crystal Ballroom Illuminated for Black-Tie Gala">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=700&q=80" alt="Grand Ballroom" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Crystal Ballroom</h5>
+              <p>Sparkling chandeliers and spacious dance floors</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo 12: Decorations -->
+        <div class="col-sm-6 col-lg-4 gallery-item-col" data-category="decorations">
+          <div class="gallery-item"
+               data-full-img="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=1200&q=80"
+               data-caption="Midnight Fireworks & Grand Exit Celebration">
+            <img src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=700&q=80" alt="Wedding Fireworks" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+              <h5>Grand Finale Celebration</h5>
+              <p>Pyrotechnics and celebratory champagne toasts</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Booking Banner -->
+      <div class="text-center mt-5 pt-4">
+        <h4 class="mb-3">Love What You See?</h4>
+        <p class="text-muted mx-auto mb-4" style="max-width: 550px;">
+          Bring any of these exact designs and themes to your wedding by reserving your date with us today.
+        </p>
+        <a href="booking.html" class="btn btn-gold btn-lg">
+          <i class="bi bi-calendar2-heart me-1"></i> Book These Themes Now
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Image Lightbox Modal
+       ========================================================================== -->
+  <div class="modal fade lightbox-modal" id="galleryLightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close-white-custom" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <img id="lightboxImage" src="" alt="Enlarged Wedding Photo" class="lightbox-img">
+          <div id="lightboxCaptionText" class="lightbox-caption"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-white mb-3">
+            <i class="bi bi-gem text-warning"></i> Eternal<span class="text-warning">Knot</span>
+          </div>
+          <p>
+            Immerse yourself in wedding elegance. Our photo gallery highlights authentic setups from real weddings executed by our planning network.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="venues.html"><i class="bi bi-chevron-right"></i> Venues</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Photo Gallery</a></li>
+            <li><a href="booking.html"><i class="bi bi-chevron-right"></i> Online Booking</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Categories</h5>
+          <ul class="footer-links">
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Royal Venues</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Stage & Mandaps</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Floral Sculptures</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Banquet Dining</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Get in Touch</h5>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt text-warning me-2"></i> 108 Royal Orchid Lane, Udaipur, India</li>
+            <li><i class="bi bi-telephone text-warning me-2"></i> +91 98765 43210</li>
+            <li><i class="bi bi-envelope text-warning me-2"></i> info@eternalknot.com</li>
+            <li><i class="bi bi-clock text-warning me-2"></i> Mon - Sun: 9:00 AM - 8:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 <strong>Eternal Knot</strong>. All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <span class="text-muted">College BCA Project - Frontend Only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

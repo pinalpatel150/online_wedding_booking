@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venues | Eternal Knot Wedding Booking</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg sticky-top main-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-gem"></i>
+        Eternal<span>Knot</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#weddingNav" aria-controls="weddingNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="weddingNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="venues.html">Venues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn nav-cta-btn" href="booking.html">
+              <i class="bi bi-calendar-heart me-1"></i> Book Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Page Banner
+       ========================================================================== -->
+  <header class="page-banner">
+    <div class="container">
+      <span class="hero-subtitle">Dream Settings</span>
+      <h1>Luxury Wedding Venues</h1>
+      <p>Discover enchanting royal forts, pristine beachfront havens, and lush botanical gardens for your unforgettable celebration.</p>
+      <ul class="breadcrumb-custom">
+        <li><a href="index.html">Home</a></li>
+        <li><span>/</span></li>
+        <li class="text-white-50">Venues</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- Intro & Info -->
+      <div class="text-center mb-5">
+        <span class="script-subtitle">Explore & Reserve</span>
+        <h2 class="display-6 fw-bold">Handpicked Wedding Destinations</h2>
+        <div class="gold-divider"></div>
+        <p class="mx-auto" style="max-width: 680px;">
+          All our verified venues include private bridal suites, designated ceremony mandaps, banquet facilities, power backup, and dedicated venue manager assistance.
+        </p>
+      </div>
+
+      <!-- Venues Grid -->
+      <div class="row g-4">
+        
+        <!-- Venue 1: Grand Royal Palace -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card">
+            <div class="venue-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Grand Royal Palace" class="venue-img">
+              <span class="venue-badge"><i class="bi bi-star-fill text-warning"></i> Premier Palace</span>
+              <span class="venue-price-badge">$8,500 / day</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-location">
+                <i class="bi bi-geo-alt-fill"></i> Udaipur, Rajasthan
+              </div>
+              <h3 class="venue-title">Grand Royal Palace</h3>
+              <p>Majestic heritage domes, lake-view courtyards, and sovereign marble halls surrounded by romantic reflecting pools.</p>
+              <div class="venue-meta">
+                <span class="venue-meta-item"><i class="bi bi-people-fill"></i> Up to 800 Guests</span>
+                <span class="venue-meta-item"><i class="bi bi-p-circle-fill"></i> Valet Included</span>
+              </div>
+              <div class="venue-card-footer">
+                <button class="btn btn-outline-gold btn-view-venue"
+                        data-venue-key="royal-palace"
+                        data-title="Grand Royal Palace"
+                        data-img="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+                        data-location="Udaipur, Rajasthan"
+                        data-capacity="800 Guests"
+                        data-price="$8,500 / day"
+                        data-desc="Step into royal grandeur at Udaipur's premier heritage property. Overlooking panoramic lakes, this palace provides imperial stone architecture, traditional sheesh mahal suites, royal elephant entrances, and sprawling courtyard lighting.">
+                  View Details
+                </button>
+                <a href="booking.html?venue=royal-palace" class="btn btn-gold">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 2: Sunset Beach Resort & Spa -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card">
+            <div class="venue-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=80" alt="Sunset Beach Resort & Spa" class="venue-img">
+              <span class="venue-badge"><i class="bi bi-water text-info"></i> Beachfront</span>
+              <span class="venue-price-badge">$6,500 / day</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-location">
+                <i class="bi bi-geo-alt-fill"></i> Goa Coastal Coast
+              </div>
+              <h3 class="venue-title">Sunset Beach Resort & Spa</h3>
+              <p>Barefoot beach vows, swaying palm canopies, golden sands, and open-air seaside dining pavilions.</p>
+              <div class="venue-meta">
+                <span class="venue-meta-item"><i class="bi bi-people-fill"></i> Up to 400 Guests</span>
+                <span class="venue-meta-item"><i class="bi bi-music-note-beamed"></i> Beach DJ Permitted</span>
+              </div>
+              <div class="venue-card-footer">
+                <button class="btn btn-outline-gold btn-view-venue"
+                        data-venue-key="sunset-beach"
+                        data-title="Sunset Beach Resort & Spa"
+                        data-img="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=900&q=80"
+                        data-location="Goa Coastal Coast"
+                        data-capacity="400 Guests"
+                        data-price="$6,500 / day"
+                        data-desc="Create unforgettable coastal memories with direct beach access, private oceanfront lawns, seaside bridal suites, and evening fire pit setups for post-ceremony celebrations.">
+                  View Details
+                </button>
+                <a href="booking.html?venue=sunset-beach" class="btn btn-gold">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 3: Emerald Garden Estate -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card">
+            <div class="venue-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80" alt="Emerald Garden Estate" class="venue-img">
+              <span class="venue-badge"><i class="bi bi-tree-fill text-success"></i> Botanical Lawn</span>
+              <span class="venue-price-badge">$5,200 / day</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-location">
+                <i class="bi bi-geo-alt-fill"></i> Bangalore Hills
+              </div>
+              <h3 class="venue-title">Emerald Garden Estate</h3>
+              <p>Exotic tropical flora, century-old banyan canopies, and a modern glass-house pavilion for indoor-outdoor harmony.</p>
+              <div class="venue-meta">
+                <span class="venue-meta-item"><i class="bi bi-people-fill"></i> Up to 500 Guests</span>
+                <span class="venue-meta-item"><i class="bi bi-flower2"></i> Garden Pavilion</span>
+              </div>
+              <div class="venue-card-footer">
+                <button class="btn btn-outline-gold btn-view-venue"
+                        data-venue-key="emerald-garden"
+                        data-title="Emerald Garden Estate"
+                        data-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80"
+                        data-location="Bangalore Hills"
+                        data-capacity="500 Guests"
+                        data-price="$5,200 / day"
+                        data-desc="Nestled in Bangalore's tranquil rolling hills, the Emerald Garden Estate offers lush carpet lawns, Italian pergolas, natural floral arches, and ambient dusk fairy illumination.">
+                  View Details
+                </button>
+                <a href="booking.html?venue=emerald-garden" class="btn btn-gold">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 4: Heritage Fort & Courtyard -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card">
+            <div class="venue-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" alt="Heritage Fort & Courtyard" class="venue-img">
+              <span class="venue-badge"><i class="bi bi-shield-shaded text-danger"></i> Royal Heritage</span>
+              <span class="venue-price-badge">$9,500 / day</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-location">
+                <i class="bi bi-geo-alt-fill"></i> Jaipur Heritage Hub
+              </div>
+              <h3 class="venue-title">Heritage Fort & Courtyard</h3>
+              <p>Spectacular 18th-century sandstone fortress, torch-lit ramparts, and expansive royal durbar courtyards.</p>
+              <div class="venue-meta">
+                <span class="venue-meta-item"><i class="bi bi-people-fill"></i> Up to 600 Guests</span>
+                <span class="venue-meta-item"><i class="bi bi-fire"></i> Torchlight Ambiance</span>
+              </div>
+              <div class="venue-card-footer">
+                <button class="btn btn-outline-gold btn-view-venue"
+                        data-venue-key="heritage-fort"
+                        data-title="Heritage Fort & Courtyard"
+                        data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80"
+                        data-location="Jaipur Heritage Hub"
+                        data-capacity="600 Guests"
+                        data-price="$9,500 / day"
+                        data-desc="A royal fairy-tale venue offering majestic ramparts, intricately hand-carved jharokhas, historic canon towers, and magnificent banqueting courtyards for truly regal wedding rituals.">
+                  View Details
+                </button>
+                <a href="booking.html?venue=heritage-fort" class="btn btn-gold">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 5: Crystal Luxury Ballroom -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card">
+            <div class="venue-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80" alt="Crystal Luxury Ballroom" class="venue-img">
+              <span class="venue-badge"><i class="bi bi-brightness-high text-warning"></i> Modern Luxury</span>
+              <span class="venue-price-badge">$7,000 / day</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-location">
+                <i class="bi bi-geo-alt-fill"></i> Mumbai Financial City
+              </div>
+              <h3 class="venue-title">Crystal Luxury Ballroom</h3>
+              <p>Opulent Austrian crystal chandeliers, high acoustic ceilings, marble dance floors, and climate-controlled elegance.</p>
+              <div class="venue-meta">
+                <span class="venue-meta-item"><i class="bi bi-people-fill"></i> Up to 450 Guests</span>
+                <span class="venue-meta-item"><i class="bi bi-snow"></i> 100% Central AC</span>
+              </div>
+              <div class="venue-card-footer">
+                <button class="btn btn-outline-gold btn-view-venue"
+                        data-venue-key="crystal-ballroom"
+                        data-title="Crystal Luxury Ballroom"
+                        data-img="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80"
+                        data-location="Mumbai Financial City"
+                        data-capacity="450 Guests"
+                        data-price="$7,000 / day"
+                        data-desc="Designed for lavish black-tie receptions and modern sangeet nights. Featuring intelligent RGB architectural mood lighting, integrated Bose sound engineering, and five-star kitchen galleys.">
+                  View Details
+                </button>
+                <a href="booking.html?venue=crystal-ballroom" class="btn btn-gold">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 6: Rustic Vineyard Haven -->
+        <div class="col-md-6 col-lg-4">
+          <div class="venue-card">
+            <div class="venue-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=900&q=80" alt="Rustic Vineyard Haven" class="venue-img">
+              <span class="venue-badge"><i class="bi bi-cup-straw text-primary"></i> Vineyard Resort</span>
+              <span class="venue-price-badge">$4,800 / day</span>
+            </div>
+            <div class="venue-card-body">
+              <div class="venue-location">
+                <i class="bi bi-geo-alt-fill"></i> Nashik Valley
+              </div>
+              <h3 class="venue-title">Rustic Vineyard Haven</h3>
+              <p>Rolling grape vines, wooden wine barrels, panoramic hill vistas, and charming warm bohemian aesthetics.</p>
+              <div class="venue-meta">
+                <span class="venue-meta-item"><i class="bi bi-people-fill"></i> Up to 300 Guests</span>
+                <span class="venue-meta-item"><i class="bi bi-cup-fill"></i> Wine Tasting Tour</span>
+              </div>
+              <div class="venue-card-footer">
+                <button class="btn btn-outline-gold btn-view-venue"
+                        data-venue-key="rustic-vineyard"
+                        data-title="Rustic Vineyard Haven"
+                        data-img="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=900&q=80"
+                        data-location="Nashik Valley"
+                        data-capacity="300 Guests"
+                        data-price="$4,800 / day"
+                        data-desc="A dreamy countryside retreat surrounded by endless vineyard rows. Perfect for intimate sundowner weddings, rustic wooden dining setups, acoustic music nights, and curated artisan wine bars.">
+                  View Details
+                </button>
+                <a href="booking.html?venue=rustic-vineyard" class="btn btn-gold">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ & Amenities Note -->
+      <div class="stats-bar mt-5 p-4">
+        <div class="row align-items-center g-3">
+          <div class="col-md-8">
+            <h4 class="mb-1 text-dark"><i class="bi bi-info-circle-fill text-warning me-2"></i>Looking for a Custom Destination Package?</h4>
+            <p class="mb-0 small">All venue reservations include round-the-clock venue security, bridal powder rooms, backup power generators, and vendor access 12 hours prior to ceremonies.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="booking.html" class="btn btn-gold">
+              <i class="bi bi-calendar-check me-1"></i> Check Date Availability
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Venue Details Preview Modal
+       ========================================================================== -->
+  <div class="modal fade" id="venueDetailModal" tabindex="-1" aria-labelledby="modalVenueTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title" id="modalVenueTitle">Venue Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img id="modalVenueImg" src="" alt="Venue Image" class="img-fluid rounded-3 shadow-sm w-100" style="height: 260px; object-fit: cover;">
+            </div>
+            <div class="col-md-6">
+              <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill text-warning me-1"></i> <span id="modalVenueLocation"></span></p>
+              <div class="d-flex gap-3 mb-3">
+                <span class="badge bg-light text-dark border p-2"><i class="bi bi-people-fill text-warning me-1"></i> <span id="modalVenueCapacity"></span></span>
+                <span class="badge bg-light text-dark border p-2"><i class="bi bi-tag-fill text-warning me-1"></i> <span id="modalVenuePrice"></span></span>
+              </div>
+              <p id="modalVenueDesc" class="small text-muted mb-4"></p>
+              <div class="d-flex gap-2">
+                <a href="booking.html" id="modalVenueBookBtn" class="btn btn-gold flex-grow-1">
+                  Book This Venue
+                </a>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand text-white mb-3">
+            <i class="bi bi-gem text-warning"></i> Eternal<span class="text-warning">Knot</span>
+          </div>
+          <p>
+            Eternal Knot connects couples with verified luxury wedding venues and bespoke vendors for seamless celebrations.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="venues.html"><i class="bi bi-chevron-right"></i> Venues</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Photo Gallery</a></li>
+            <li><a href="booking.html"><i class="bi bi-chevron-right"></i> Online Booking</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Venue Highlights</h5>
+          <ul class="footer-links">
+            <li><a href="booking.html?venue=royal-palace"><i class="bi bi-chevron-right"></i> Grand Royal Palace</a></li>
+            <li><a href="booking.html?venue=sunset-beach"><i class="bi bi-chevron-right"></i> Sunset Beach Resort</a></li>
+            <li><a href="booking.html?venue=emerald-garden"><i class="bi bi-chevron-right"></i> Emerald Garden Estate</a></li>
+            <li><a href="booking.html?venue=heritage-fort"><i class="bi bi-chevron-right"></i> Heritage Fort & Courtyard</a></li>
+            <li><a href="booking.html?venue=crystal-ballroom"><i class="bi bi-chevron-right"></i> Crystal Ballroom</a></li>
+            <li><a href="booking.html?venue=rustic-vineyard"><i class="bi bi-chevron-right"></i> Rustic Vineyard Haven</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Get in Touch</h5>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt text-warning me-2"></i> 108 Royal Orchid Lane, Udaipur, India</li>
+            <li><i class="bi bi-telephone text-warning me-2"></i> +91 98765 43210</li>
+            <li><i class="bi bi-envelope text-warning me-2"></i> info@eternalknot.com</li>
+            <li><i class="bi bi-clock text-warning me-2"></i> Mon - Sun: 9:00 AM - 8:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 <strong>Eternal Knot</strong>. All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <span class="text-muted">Designed for College / BCA Demonstration Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
